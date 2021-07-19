@@ -6,8 +6,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
