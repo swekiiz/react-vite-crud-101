@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
 type addProps = {
   children?: ReactNode;
@@ -7,11 +7,10 @@ type addProps = {
   width?: string;
   height?: string;
   active?: boolean;
-  size?: "big" | "medium" | "small";
+  size?: 'big' | 'medium' | 'small';
 };
 
-export type OutlineButtonPropsType = addProps &
-  React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type OutlineButtonPropsType = addProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
   children,
@@ -25,17 +24,17 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
   ...rest
 }: OutlineButtonPropsType): JSX.Element => {
   const padding = {
-    big: "py-2",
-    medium: "py-1",
-    small: "py-0",
+    big: 'py-2',
+    medium: 'py-1',
+    small: 'py-0',
   };
 
   return (
     <button
-      style={{ width: width || "auto", height: height || "auto", ...style }}
+      style={{ width: width || 'auto', height: height || 'auto', ...style }}
       className={`${className} text-center rounded-full text-sm
       lg:text-md font-medium transition-all duration-200 ease-in-out ${
-        size ? padding[size] : padding["medium"]
+        size ? padding[size] : padding['medium']
       }
     `}
       onClick={onClick}
