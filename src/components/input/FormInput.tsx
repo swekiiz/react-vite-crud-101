@@ -13,9 +13,9 @@ export const FormInput: React.FC<IFormInput> = ({
   return (
     <div className={className}>
       <label>
-        <span className="text-primary block mb-1 pl-4 text-left text-sm">{label}:</span>
+        <span className="block mb-1 pl-4 text-left text-primary text-sm">{label}:</span>
         <input
-          className={`w-full px-4 py-1 bg-darkest border outline-none border-darkest focus:border-primary rounded-xl text-base text-tertiary`}
+          className="px-4 py-1 w-full text-tertiary text-base bg-darkest border border-darkest focus:border-primary rounded-xl outline-none"
           {...rest}
         />
       </label>
