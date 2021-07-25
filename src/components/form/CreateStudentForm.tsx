@@ -15,15 +15,8 @@ export const CreateStudentForm: React.FC = (): JSX.Element => {
 
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    console.log('Submit form');
+    console.log({ name, email, rollNo });
 
-    // const target = event.target as typeof event.target & {
-    //   email: { value: string };
-    //   password: { value: string };
-    // };
-
-    // const email = target.email.value;
-    // const password = target.password.value;
     resetForm();
   };
 
