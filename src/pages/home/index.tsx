@@ -1,14 +1,15 @@
 import React from 'react';
 import { OButton } from 'components/button';
+import Desktop from 'layouts/DesktopWrapper';
 
 interface IHome {}
 
 const Home: React.FC<IHome> = ({}: IHome): JSX.Element => {
   return (
-    <div className="bg-dark flex flex-col items-center justify-center w-screen h-screen">
+    <Desktop title="home">
       <h1 className="text-center text-white text-4xl">hello</h1>
       <OButton className="px-4">click </OButton>
-    </div>
+    </Desktop>
   );
 };
 

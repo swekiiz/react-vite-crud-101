@@ -6,7 +6,6 @@ type addProps = {
   style?: { [key: string]: string | number };
   width?: string;
   height?: string;
-  active?: boolean;
   size?: 'big' | 'medium' | 'small';
 };
 
@@ -18,7 +17,6 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
   style,
   width,
   height,
-  active,
   onClick,
   size,
   ...rest
