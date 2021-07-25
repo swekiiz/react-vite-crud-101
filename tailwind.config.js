@@ -5,6 +5,7 @@ const palette = {
   secondary: '#d65353',
   tertiary: '#b2d3e2',
   dark: '#28364a',
+  darkest: '#1e2938',
 };
 
 module.exports = {
