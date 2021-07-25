@@ -5,12 +5,19 @@ import { OButton } from 'components/button';
 export const CreateStudentForm: React.FC = (): JSX.Element => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const [rollNo, setRollNo] = useState<string>('');
+  const [rollNo, setRollNo] = useState<number | ''>('');
 
   const resetForm = () => {
     setName('');
     setEmail('');
     setRollNo('');
+  };
+
+  const handleRollNoOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+
+    if (/^[0-9\b]+$/.test(value)) setRollNo(Number(value));
+    else if (value === '') setRollNo(value);
   };
 
   const handleSubmit = (event: React.SyntheticEvent) => {
@@ -43,8 +50,9 @@ export const CreateStudentForm: React.FC = (): JSX.Element => {
           className={inputClassStyle}
           label="roll no"
           type="text"
+          pattern="[0-9]*"
           value={rollNo}
-          onChange={(e) => setRollNo(e.target.value)}
+          onInput={handleRollNoOnChange}
         />
         <div className="flex w-full">
           <OButton type="submit" className="ml-auto mr-4 mt-4 px-4">
