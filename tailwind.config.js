@@ -1,5 +1,12 @@
 const colors = require('tailwindcss/colors');
 
+const palette = {
+  primary: '#f7c35f',
+  secondary: '#d65353',
+  tertiary: '#b2d3e2',
+  dark: '#28364a',
+};
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './index.html'],
   presets: [],
@@ -15,7 +22,6 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -26,6 +32,7 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      ...palette,
     },
     spacing: {
       px: '1px',
