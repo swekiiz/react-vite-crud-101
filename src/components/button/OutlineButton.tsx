@@ -30,7 +30,7 @@ export const OutlineButton: React.FC<OutlineButtonPropsType> = ({
   return (
     <button
       style={{ width: width || 'auto', height: height || 'auto', ...style }}
-      className={`${className} text-center rounded-full text-sm bg-transparent border-2 border-primary shadow-md
+      className={`${className} text-center rounded-xl text-sm bg-transparent border border-primary shadow-md
       lg:text-base font-medium transition-all duration-200 ease-in-out text-primary hover:text-dark hover:bg-primary ${
         size ? padding[size] : padding['medium']
       }
