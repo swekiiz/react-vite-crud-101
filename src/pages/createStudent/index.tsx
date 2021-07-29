@@ -7,7 +7,7 @@ interface ICreateStudent {}
 const CreateStudent: React.FC<ICreateStudent> = ({}: ICreateStudent): JSX.Element => {
   return (
     <Desktop title="Create Student">
-      <div className="flex justify-center w-full mt-16">
+      <div className="flex justify-center mt-16 w-full">
         <CreateStudentForm />
       </div>
     </Desktop>

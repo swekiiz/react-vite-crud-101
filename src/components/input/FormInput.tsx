@@ -5,11 +5,7 @@ interface IFormInput extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 
-export const FormInput: React.FC<IFormInput> = ({
-  className,
-  label = '',
-  ...rest
-}: IFormInput): JSX.Element => {
+export const FormInput: React.FC<IFormInput> = ({ className, label = '', ...rest }: IFormInput): JSX.Element => {
   return (
     <div className={className}>
       <label>
