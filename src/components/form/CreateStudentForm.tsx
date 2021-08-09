@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FormInput } from 'components/input';
 import { OButton } from 'components/button';
+import axios from 'axios';
 
 export const CreateStudentForm: React.FC = (): JSX.Element => {
   const [name, setName] = useState<string>('');
@@ -22,7 +23,14 @@ export const CreateStudentForm: React.FC = (): JSX.Element => {
 
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    console.log({ name, email, rollNo });
+
+    const studentObject = {
+      name,
+      email,
+      rollNo,
+    };
+
+    axios.post('http://localhost:4000/student/create-student', studentObject).then((res) => console.log(res.data));
 
     resetForm();
   };

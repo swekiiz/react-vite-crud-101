@@ -8,6 +8,7 @@ const studentSchema = require('../models/Student');
 router.route('/create-student').post((req, res, next) => {
   studentSchema.create(req.body, (error, data) => {
     if (error) {
+      console.log(error);
       return next(error);
     } else {
       console.log(data);
