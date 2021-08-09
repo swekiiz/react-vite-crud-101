@@ -3,7 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const studentSchema = require('../models/student');
+const studentSchema = require('../models/Student');
 
 router.route('/create-student').post((req, res, next) => {
   studentSchema.create(req.body, (error, data) => {
@@ -21,7 +21,6 @@ router.route('/').get((req, res, next) => {
     if (error) {
       return next(error);
     } else {
-      console.log(data);
       res.json(data);
     }
   });
@@ -32,7 +31,6 @@ router.route('/edit-student/:id').get((req, res, next) => {
     if (error) {
       return next(error);
     } else {
-      console.log(data);
       res.json(data);
     }
   });
